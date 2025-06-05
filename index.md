@@ -1,5 +1,12 @@
-Here you can say lots of fun things about your site.
+---
+layout: home
+title: Welcome to My Blog & Portfolio
+---
 
-Maybe say a some things about yourself.
+Hello! I’m **Jongmin**, an AI Research Scientist passionate about computational biology, deep learning, and biotechnology. On this site, you’ll find:
 
-Or maybe what you plan to blog about.
+- Detailed write-ups of my side projects.  
+- A showcase of my portfolio: GitHub repos, tutorials, and publications.  
+- Occasional blog posts on AI/machine learning applications in genomics and bioinformatics.
+
+Feel free to browse around—my latest posts are down below!  
