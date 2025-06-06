@@ -21,7 +21,7 @@ rouge:
 theme: minima
 rss: rss
 
-# Turn off kramdown’s internal highlighter (we’ll let Rouge handle it)
+# Turn off kramdown’s internal highlighter (we let Rouge do it)
 kramdown:
   syntax_highlighter_opts:
     disable: true
@@ -34,7 +34,7 @@ plugins:
   - jekyll-sitemap
 
 # ----------------------------------------------------------
-# Auto-generate post titles (optional)
+# Auto-generate post titles from first heading (optional)
 # ----------------------------------------------------------
 titles_from_headings:
   strip_title: true
@@ -51,18 +51,16 @@ defaults:
       tags: Other
 
 # ----------------------------------------------------------
-# Navigation (Minima will use this for the header menu)
+# Navigation (Minima will pick this up in the header)
 # ----------------------------------------------------------
 nav:
   - title: "Home"
-    url:   "/"
+    url: "/"
   - title: "Project"
-    url:   "/project/"
+    url: "/project/"
   - title: "Blog"
-    url:   "/"
+    url: "/"
 
 # ----------------------------------------------------------
-# Ensure Jekyll copies our custom CSS into _site
+# (No include: override.css anymore)
 # ----------------------------------------------------------
-include:
-  - assets/css/override.css
