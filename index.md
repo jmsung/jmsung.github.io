@@ -10,3 +10,12 @@ Hello! I’m **Jongmin**, an AI Research Scientist passionate about computationa
 - Occasional blog posts on AI/machine learning applications in genomics and bioinformatics.
 
 Feel free to browse around—my latest posts are down below!  
+
+<!--
+* This blog is updated from https://chadbaldwin.net/2021/03/14/how-to-build-a-sql-blog.html
+
+Instruction
+* run `bundle exec jekyll serve --livereload`
+* navigate to http://localhost:4000
+* git commit and push
+-->
