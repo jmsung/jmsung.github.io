@@ -1,21 +1,37 @@
 <hr>
 <div class="post_navi">
-  {%- if page.previous.url -%}
-  <a class="post_navi-item nav_prev" href="{{ page.previous.url }}" title="{{ page.previous.title }}">
-    <div class="post_navi-arrow">&lt;</div><div class="post_navi-label">Previous Post</div><div><span>{{ page.previous.title }}</span></div>
-  </a>
-  {%- else -%}
-  <a class="post_navi-item nav_prev" href="{{ 'archive.html' | absolute_url }}" title="Blog Archive">
-    <div class="post_navi-arrow">&lt;</div><div class="post_navi-label">Blog Archive</div><div><span>Archive of all previous blog posts</span></div>
-  </a>
-  {%- endif -%}
-  {%- if page.next.url -%}
-  <a class="post_navi-item nav_next" href="{{ page.next.url }}" title="{{ page.next.title }}">
-    <div class="post_navi-arrow">&gt;</div><div class="post_navi-label">Next Post</div><div><span>{{ page.next.title }}</span></div>
-  </a>
-  {%- else -%}
-  <a class="post_navi-item nav_next" href="{{ 'archive.html' | absolute_url }}" title="Blog Archive">
-    <div class="post_navi-arrow">&gt;</div><div class="post_navi-label">Blog Archive</div><div><span>Archive of all previous blog posts</span></div>
-  </a>
-  {%- endif -%}
+
+  {%- capture nav_items -%}previous,next{%- endcapture -%}
+  {%- assign nav_array = nav_items | split: "," -%}
+
+  {%- for dir in nav_array -%}
+    {%- if page[dir] %}
+      {%- assign url   = page[dir].url -%}
+      {%- assign title = page[dir].title -%}
+      {%- if dir == "previous" -%}
+        {%- assign arrow = "&lt;"            -%}
+        {%- assign label = "Previous Post"  -%}
+        {%- assign desc  = page[dir].title   -%}
+      {%- else -%}
+        {%- assign arrow = "&gt;"            -%}
+        {%- assign label = "Next Post"      -%}
+        {%- assign desc  = page[dir].title   -%}
+      {%- endif -%}
+    {%- else %}
+      {%- assign url   = "archive.html" | absolute_url  -%}
+      {%- assign title = "Blog Archive"                 -%}
+      {%- assign arrow = dir == "previous" ? "&lt;" : "&gt;" -%}
+      {%- assign label = "Blog Archive"                      -%}
+      {%- assign desc  = "Archive of all previous blog posts" -%}
+    {%- endif %}
+
+    <a class="post_navi-item nav_{{ dir == "previous" ? "prev" : "next" }}"
+       href="{{ url }}"
+       title="{{ title }}">
+      <div class="post_navi-arrow">{{ arrow }}</div>
+      <div class="post_navi-label">{{ label }}</div>
+      <div><span>{{ desc }}</span></div>
+    </a>
+  {%- endfor -%}
+
 </div>

@@ -51,15 +51,23 @@ defaults:
       tags: Other
 
 # ----------------------------------------------------------
-# Navigation (Minima will pick this up in the header)
+# Navigation (Minima will pick this up and render a <ul>)
 # ----------------------------------------------------------
 nav:
-  - title: "Home"
-    url: "/"
+  - title: "About"
+    url: "/about/"
+  - title: "Blog"
+    url: "/blog/"
   - title: "Project"
     url: "/project/"
-  - title: "Blog"
-    url: "/"
+
+# ----------------------------------------------------------
+# Header pages (override Minima’s auto-discovery)
+# ----------------------------------------------------------
+header_pages:
+  - about.md
+  - blog.md       # ← tell Minima “only these pages show up in the header”
+  - project.md
 
 # ----------------------------------------------------------
 # (No include: override.css anymore)

@@ -1,90 +1,35 @@
 ---
-# Jekyll front matter: treat this as SCSS and auto-include it
+# Jekyll front matter so Minima auto-loads this SCSS
 ---
 
-/* 1) Light-mode defaults (Minima’s default colors + small tweaks) */
-body {
-  background-color: #ffffff;
-  color: #333333;
-}
-a {
-  color: #0366d6;
-}
-a:hover {
-  color: #d73a49;
-}
+/* Light-mode defaults */
+body { background: #fff; color: #333; }
+a    { color: #0366d6; }
+a:hover { color: #d73a49; }
 
-/* If the visitor’s OS/browser is in dark mode… */
+/* Dark-mode overrides */
 @media (prefers-color-scheme: dark) {
-  /* Dark background & light text */
-  body {
-    background-color: #1e1e1e !important;
-    color: #e0e0e0 !important;
-  }
-
-  /* Header & footer backgrounds */
+  body { background: #1e1e1e !important; color: #e0e0e0 !important; }
   header.site-header,
-  footer.site-footer {
-    background-color: #2a2a2a !important;
-  }
-
-  /* Navigation bar (Minima’s site‐nav) */
-  .site-nav {
-    background-color: #2a2a2a !important;
-  }
-
-  /* Link colors in dark mode */
-  a {
-    color: #9cdcfe !important;
-  }
-  a:hover {
-    color: #c586c0 !important;
-  }
-
-  /* Code blocks (pre & code) */
-  pre,
-  code {
-    background-color: #2d2d2d !important;
-    color: #d4d4d4 !important;
-  }
-
-  /* Blockquote styling */
-  blockquote {
-    border-left-color: #5a5a5a !important;
-    color: #cccccc !important;
-  }
+  footer.site-footer,
+  .site-nav { background: #2a2a2a !important; }
+  a { color: #9cdcfe !important; }
+  a:hover { color: #c586c0 !important; }
+  pre, code { background: #2d2d2d !important; color: #d4d4d4 !important; }
+  blockquote { border-left-color: #5a5a5a !important; color: #cccccc !important; }
+  .post_navi .post_navi-arrow { opacity: 0.6 !important; }
 }
 
-/* 2) Your <hr> + post-navigation tweaks (applies in both modes) */
-hr {
-  margin-top: 30px;
-  margin-bottom: 20px;
-}
+/* <hr> + post-nav tweaks (always applied) */
+hr { margin-top: 30px; margin-bottom: 20px; }
 
-.post_navi {
-  display: flex;
-}
-.post_navi-label {
-  font-size: 0.8em;
-  opacity: 0.5;
-}
+.post_navi { display: flex; }
+.post_navi-label { font-size: 0.8em; opacity: 0.5; }
 .post_navi .post_navi-item {
-  padding: 0 2.2em;
-  width: 50%;
-  position: relative;
-  color: inherit !important;
+  padding: 0 2.2em; width: 50%; position: relative; color: inherit !important;
 }
 .post_navi .nav_prev { text-align: left; }
 .post_navi .nav_next { text-align: right; }
 .post_navi .post_navi-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 2.5em;
-  opacity: 0.3;
-}
-@media (prefers-color-scheme: dark) {
-  .post_navi .post_navi-arrow {
-    opacity: 0.6 !important;
-  }
+  position: absolute; top: 50%; transform: translateY(-50%); font-size: 2.5em; opacity: 0.3;
 }
