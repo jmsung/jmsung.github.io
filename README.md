@@ -1,0 +1,2 @@
+# Jongmin Sung's blog
+
