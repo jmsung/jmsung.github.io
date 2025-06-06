@@ -1,36 +1,68 @@
-title: "Jongmin Sung’s Blog"
-author: "Jongmin Sung"
-description: "AI Research Science Projects" # This will show up in places like twitter, linkedin, etc, if you share your sites url as a post.
+# ----------------------------------------------------------
+# Site settings
+# ----------------------------------------------------------
+title:       "Jongmin Sung’s Blog"
+author:      "Jongmin Sung"
+description: "AI Research Science Projects"
 
-# Email / Social media user names used by the minima theme:
-# All of these are optional and can be removed or commented out
-email: "jongmin.sung@gmail.com"
-twitter_username: "JongminSung2"
-github_username: "jmsung"
+# (Optional: remove/comment out any you don’t want)
+email:             "jongmin.sung@gmail.com"
+twitter_username:  "JongminSung2"
+github_username:   "jmsung"
 linkedin_username: "jongmin-sung"
 
-#########################################################################################
-######### Nothing below needs to be changed (unless you know what you're doing) #########
-#########################################################################################
-theme: "minima"
-
+# ----------------------------------------------------------
+# Build settings (Minima defaults)
+# ----------------------------------------------------------
+markdown: kramdown
+highlighter: rouge
+rouge:
+  theme: monokai
+theme: minima
 rss: rss
 
+# Turn off kramdown’s internal highlighter (we’ll let Rouge handle it)
 kramdown:
   syntax_highlighter_opts:
     disable: true
-    
+
+# ----------------------------------------------------------
+# Plugins (GitHub Pages–approved)
+# ----------------------------------------------------------
 plugins:
   - jekyll-feed
   - jekyll-sitemap
 
+# ----------------------------------------------------------
+# Auto-generate post titles (optional)
+# ----------------------------------------------------------
 titles_from_headings:
   strip_title: true
   collections: true
 
+# ----------------------------------------------------------
+# Defaults: add “Other” tag to new posts automatically
+# ----------------------------------------------------------
 defaults:
   - scope:
       path: ""
       type: post
     values:
       tags: Other
+
+# ----------------------------------------------------------
+# Navigation (Minima will use this for the header menu)
+# ----------------------------------------------------------
+nav:
+  - title: "Home"
+    url:   "/"
+  - title: "Project"
+    url:   "/project/"
+  - title: "Blog"
+    url:   "/"
+
+# ----------------------------------------------------------
+# Ensure Jekyll copies our custom CSS into _site
+# ----------------------------------------------------------
+include:
+  - assets/css/override.css

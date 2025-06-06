@@ -1,0 +1,98 @@
+/* ----------------------------------------------------------
+   override.css — only two things:
+   1) Your HR / post-navigation tweaks
+   2) A basic light ⇆ dark media query
+   ---------------------------------------------------------- */
+
+/* 1) Customize <hr> spacing */
+hr {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+/* 2) Post navigation links (flex & arrow centering) */
+.post_navi {
+  display: flex;
+}
+
+.post_navi-label {
+  font-size: 0.8em;
+  opacity: 0.5;
+}
+
+.post_navi .post_navi-item {
+  padding: 0 2.2em;
+  width: 50%;
+  position: relative;
+  color: inherit !important; /* let Minima’s link color show */
+}
+
+.post_navi .nav_prev { text-align: left; }
+.post_navi .nav_next { text-align: right; }
+
+/* Center the arrow icon inside each nav item */
+.post_navi .post_navi-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.5em;
+  opacity: 0.3;
+}
+
+/* ----------------------------------------------------------
+   3) LIGHT + DARK mode swap
+   ---------------------------------------------------------- */
+
+/* Default (light mode) – Minima’s own CSS handles most, 
+   but we explicitly set a white background & dark text */
+body {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+/* If the OS or browser prefers dark mode, override: */
+@media (prefers-color-scheme: dark) {
+  /* Dark background & light text */
+  body {
+    background-color: #1e1e1e !important;
+    color: #e0e0e0 !important;
+  }
+
+  /* Header & footer backgrounds */
+  header.site-header,
+  footer.site-footer {
+    background-color: #2a2a2a !important;
+  }
+
+  /* Minima’s navigation bar */
+  .site-nav {
+    background-color: #2a2a2a !important;
+  }
+
+  /* Links in dark mode – light-blue */
+  a {
+    color: #9cdcfe !important;
+  }
+
+  a:hover {
+    color: #c586c0 !important;
+  }
+
+  /* Code blocks – darker gray background */
+  pre,
+  code {
+    background-color: #2d2d2d !important;
+    color: #d4d4d4 !important;
+  }
+
+  /* Blockquote – slightly lighter text & darker border */
+  blockquote {
+    border-left-color: #5a5a5a !important;
+    color: #cccccc !important;
+  }
+
+  /* Make nav‐arrows a bit more opaque in dark */
+  .post_navi .post_navi-arrow {
+    opacity: 0.6 !important;
+  }
+}
