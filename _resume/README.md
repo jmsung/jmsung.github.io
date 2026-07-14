@@ -16,6 +16,15 @@ Version-controlled resume. Plain-text source → PDF via pandoc + tectonic.
 ./build.sh variants/x.md   # a tailored one -> out/x.pdf
 ```
 
+## Tailor for a specific job
+
+```bash
+./new.sh acme-bio          # copy master -> variants/acme-bio.md + build out/acme-bio.pdf
+# edit variants/acme-bio.md (reorder/rewrite bullets, swap summary), then:
+./build.sh variants/acme-bio.md
+# share out/acme-bio.pdf — variants stay local, only the master is published.
+```
+
 ## Publish to the website
 
 ```bash
