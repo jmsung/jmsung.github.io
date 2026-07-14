@@ -1,2 +1,24 @@
 ﻿_site
 .DS_Store
+
+# --- harness layer (ADR 0004) ---
+# Environment / secrets
+.env
+.env.local
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+dist/
+*.egg-info/
+.ipynb_checkpoints/
+
+# Knowledge raw layer — local cache, regenerable from source/ frontmatter.
+# The placeholder README stays tracked.
+knowledge/raw/*
+!knowledge/raw/README.md
+
+# Appended by /project-start when those dirs are chosen:
+# data/
+# results/

@@ -72,3 +72,14 @@ header_pages:
 # ----------------------------------------------------------
 # (No include: override.css anymore)
 # ----------------------------------------------------------
+
+# Harness layer (ADR 0004) — not part of the published site
+exclude:
+  - docs/
+  - knowledge/
+  - CLAUDE.md
+  - README.md
+  - .claude/
+  - _resume/README.md
+  - Gemfile
+  - Gemfile.lock
