@@ -1,0 +1,47 @@
+\documentclass[10pt]{article}
+
+\usepackage[margin=0.6in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage{hyperref}
+\usepackage{parskip}
+\usepackage{newunicodechar}
+\newunicodechar{β}{\ensuremath{\beta}}
+\newunicodechar{α}{\ensuremath{\alpha}}
+
+\definecolor{accent}{HTML}{1a3a5a}
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% Section headings: small-caps, rule beneath, tight spacing
+\titleformat{\section}{\large\bfseries\scshape\color{accent}}{}{0pt}{}[\vspace{-2pt}\rule{\textwidth}{0.8pt}]
+\titlespacing{\section}{0pt}{8pt}{4pt}
+
+% Job/entry headings (### -> subsection): bold, date pushed right via the "| date" convention
+\titleformat{\subsection}{\bfseries}{}{0pt}{}
+\titlespacing{\subsection}{0pt}{6pt}{1pt}
+
+% Tight bullet lists
+\setlist[itemize]{leftmargin=1.2em, topsep=1pt, itemsep=0pt, parsep=0pt}
+
+\setlength{\parindent}{0pt}
+\pagenumbering{gobble}
+
+% pandoc emits \tightlist; define it since we use a custom template
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\begin{document}
+
+% ---------- Header ----------
+\begin{center}
+  {\huge\bfseries $name$}\\[3pt]
+  {\large\color{accent} $title$}\\[4pt]
+  $location$ \quad\textbar\quad $phone$ \quad\textbar\quad \href{mailto:$email$}{$email$}%
+  $if(links)$$for(links)$ \quad\textbar\quad \href{$links.url$}{$links.text$}$endfor$$endif$
+\end{center}
+\vspace{4pt}
+
+$body$
+
+\end{document}
