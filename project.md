@@ -17,5 +17,4 @@ permalink: /project/
 - **Status:** Published.
 
 ## Resume  
-- You can link a PDF here, e.g.:  
-  [Download my resume](https://raw.githubusercontent.com/jmsung/jmsung.github.io/main/assets/resume.pdf)
+- [View / download my resume (PDF)]({{ '/assets/resume.pdf' | relative_url }})
