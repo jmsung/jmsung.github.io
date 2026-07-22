@@ -34,23 +34,6 @@ plugins:
   - jekyll-sitemap
 
 # ----------------------------------------------------------
-# Auto-generate post titles from first heading (optional)
-# ----------------------------------------------------------
-titles_from_headings:
-  strip_title: true
-  collections: true
-
-# ----------------------------------------------------------
-# Defaults: add “Other” tag to new posts automatically
-# ----------------------------------------------------------
-defaults:
-  - scope:
-      path: ""
-      type: post
-    values:
-      tags: Other
-
-# ----------------------------------------------------------
 # Navigation (Minima will pick this up and render a <ul>)
 # ----------------------------------------------------------
 nav:
