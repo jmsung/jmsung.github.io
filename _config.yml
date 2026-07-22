@@ -1,9 +1,9 @@
 # ----------------------------------------------------------
 # Site settings
 # ----------------------------------------------------------
-title:       "Jongmin Sung’s Blog"
+title:       "Jongmin Sung"
 author:      "Jongmin Sung"
-description: "AI Research Science Projects"
+description: "Bio × AI researcher and writer — computational biology, deep learning, biotechnology."
 
 # (Optional: remove/comment out any you don’t want)
 email:             "jongmin.sung@gmail.com"
@@ -56,17 +56,16 @@ defaults:
 nav:
   - title: "About"
     url: "/about/"
-  - title: "Blog"
-    url: "/blog/"
   - title: "Project"
     url: "/project/"
 
 # ----------------------------------------------------------
 # Header pages (override Minima’s auto-discovery)
+# The external "Bio × AI Weekly" → LatentCell link is added in the
+# _includes/header.html override (Minima can’t link out via header_pages).
 # ----------------------------------------------------------
 header_pages:
   - about.md
-  - blog.md       # ← tell Minima “only these pages show up in the header”
   - project.md
 
 # ----------------------------------------------------------

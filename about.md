@@ -18,3 +18,7 @@ permalink: /about/
 
 ### Core competencies include:
 Data Science | Data Engineering | Cloud Computing | Statistical Modeling | Signal Processing | Artificial Intelligence (AI) | Deep Learning | Machine Learning | Computer Vision | Natural Language Processing (NLP) | Large Language Models (LLM) | Computational Biology | Bioinformatics | Molecular & Cellular Biology | Assay Development | Instrument Development (HW & SW)
+
+---
+
+I write **[LatentCell](https://latentcell.ai)**, a weekly Bio × AI blog. Back to [home]({{ '/' | relative_url }}).
