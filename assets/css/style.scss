@@ -44,6 +44,65 @@ a:hover { color: #d73a49; }
   .hub-card:hover { border-color: #9cdcfe; }
 }
 
+/* Scale-triad landing hero — cell · human · Andromeda.
+   Fixed dark panel in both color schemes to mirror the LatentCell blog masthead. */
+.scale-hero {
+  background: #0e1017;
+  color: #eef1f7;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 14px;
+  padding: clamp(26px, 5vw, 48px) clamp(20px, 4vw, 40px) clamp(22px, 4vw, 34px);
+  margin: 28px 0;
+}
+.scale-hero-eyebrow {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase;
+  text-align: center; margin: 0 0 16px;
+  background: linear-gradient(100deg, #25d3ee, #e968d6);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.scale-hero-sub {
+  text-align: center; max-width: 60ch; margin: 0 auto 28px;
+  color: #c4ccda; font-size: clamp(14px, 1.7vw, 17px); line-height: 1.55;
+}
+.scale-triad {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
+  border: 1px solid rgba(255, 255, 255, 0.10); border-radius: 12px;
+  overflow: hidden; background: #000;
+}
+.scale-panel {
+  position: relative; aspect-ratio: 3 / 4; overflow: hidden; margin: 0;
+}
+.scale-panel + .scale-panel {
+  box-shadow: -1px 0 0 0 rgba(37, 211, 238, 0.4),
+              inset 1px 0 0 0 rgba(233, 104, 214, 0.25);
+}
+.scale-panel img {
+  width: 100%; height: 100%; object-fit: cover; display: block; filter: saturate(1.03);
+}
+.scale-scrim {
+  position: absolute; inset: auto 0 0 0; height: 52%;
+  background: linear-gradient(to top, rgba(3, 4, 8, 0.92), rgba(3, 4, 8, 0.35) 55%, transparent);
+}
+.scale-label {
+  position: absolute; left: 0; right: 0; bottom: 0; padding: 14px 14px 15px; text-align: center;
+}
+.scale-label .n { display: block; font-size: 15px; font-weight: 640; color: #fff; }
+.scale-label .s {
+  display: block; margin-top: 3px;
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 11px; letter-spacing: 0.06em; color: #aab4c6;
+}
+.scale-credits {
+  margin: 16px 2px 0; text-align: center;
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 10.5px; line-height: 1.6; color: #96a0b4;
+}
+@media (max-width: 640px) {
+  .scale-triad { grid-template-columns: 1fr; }
+  .scale-panel { aspect-ratio: 16 / 10; }
+}
+
 /* <hr> + post-nav tweaks (always applied) */
 hr { margin-top: 30px; margin-bottom: 20px; }
 

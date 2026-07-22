@@ -16,6 +16,29 @@ title: Home
 Bio × AI researcher and writer — working at the intersection of computational
 biology, deep learning, and biotechnology.
 
+<section class="scale-hero">
+  <p class="scale-hero-eyebrow">the same spiral, at every scale</p>
+  <p class="scale-hero-sub">From a single cell to the Andromeda galaxy, the same spiral repeats — with us in between, the way a kid on the grass looks up at the night sky. One topic a week where biology meets AI: TL;DR for the curious, depth for the advanced.</p>
+  <div class="scale-triad">
+    <figure class="scale-panel">
+      <img src="{{ '/assets/img/hero/cell.jpg' | relative_url }}" alt="Living HeLa cell, fluorescence" loading="lazy" />
+      <div class="scale-scrim"></div>
+      <figcaption class="scale-label"><span class="n">The cell</span><span class="s">~10 µm</span></figcaption>
+    </figure>
+    <figure class="scale-panel">
+      <img src="{{ '/assets/img/hero/human.jpg' | relative_url }}" alt="Vitruvian Man" loading="lazy" />
+      <div class="scale-scrim"></div>
+      <figcaption class="scale-label"><span class="n">The human</span><span class="s">~1 m · us</span></figcaption>
+    </figure>
+    <figure class="scale-panel">
+      <img src="{{ '/assets/img/hero/andromeda.jpg' | relative_url }}" alt="Andromeda galaxy" loading="lazy" />
+      <div class="scale-scrim"></div>
+      <figcaption class="scale-label"><span class="n">Andromeda</span><span class="s">2.5M light-years</span></figcaption>
+    </figure>
+  </div>
+  <p class="scale-credits">Cell: 8x57is, CC BY-SA 4.0 · Vitruvian Man: Leonardo da Vinci (public domain), photo Luc Viatour · Andromeda: Adam Evans, CC BY 2.0 — all via Wikimedia Commons</p>
+</section>
+
 <div class="hub-links">
   <a class="hub-card" href="https://latentcell.ai">
     <span class="hub-card-title">LatentCell — Bio × AI Weekly →</span>
