@@ -20,6 +20,30 @@ a:hover { color: #d73a49; }
   .post_navi .post_navi-arrow { opacity: 0.6 !important; }
 }
 
+/* Landing-hub cards */
+.hub-links {
+  display: grid;
+  gap: 14px;
+  margin: 28px 0;
+}
+.hub-card {
+  display: block;
+  padding: 16px 20px;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit !important;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.hub-card:hover { border-color: #0366d6; transform: translateY(-2px); }
+.hub-card-title { display: block; font-weight: 600; font-size: 1.05em; }
+.hub-card-desc  { display: block; margin-top: 4px; font-size: 0.9em; opacity: 0.75; }
+
+@media (prefers-color-scheme: dark) {
+  .hub-card { border-color: #3a3a3a; }
+  .hub-card:hover { border-color: #9cdcfe; }
+}
+
 /* <hr> + post-nav tweaks (always applied) */
 hr { margin-top: 30px; margin-bottom: 20px; }
 

@@ -1,4 +1,4 @@
-# Jongmin Sung's blog
+# Jongmin Sung — landing hub
 * https://jmsung.github.io/
 
 ### Instruction for update from local vscode
